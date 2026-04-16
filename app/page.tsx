@@ -9,17 +9,27 @@ const linkedinUrl = "https://www.linkedin.com/in/pauldebevec";
 const projects = [
   {
     title: "Fitness Tracker Rails",
-    description:
-      "A full-stack Rails application for tracking check-ins, measurements, progress photos, and reporting over time.",
+    summary:
+      "A full-stack fitness tracking app for logging check-ins, measurements, progress photos, and reports over time.",
+    problem:
+      "I wanted to build a practical application that helps users track progress in one place with check-ins, measurements, photos, and reporting.",
+    contribution:
+      "Built the full application with nested resources, reporting features, progress photo support, and a clean interface for reviewing fitness data over time.",
     stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Hotwire"],
-    link: "https://github.com/PaulDebevec/fitness_tracker_rails",
+    githubUrl: "https://github.com/PaulDebevec/fitness_tracker_rails",
+    liveUrl: "https://skepti-fitness-rails-a5c9631ca248.herokuapp.com/",
   },
   {
     title: "Portfolio App",
-    description:
-      "A modern personal portfolio built with Next.js to showcase experience, projects, and professional growth.",
+    summary:
+      "A modern portfolio site designed to showcase projects, experience, and growth as a full-stack engineer.",
+    problem:
+      "I wanted a polished personal site that presents my work clearly on both desktop and mobile while giving me hands-on experience with Next.js.",
+    contribution:
+      "Designed and built the site with responsive layouts, reusable content sections, a mobile navigation menu, and a clean visual system.",
     stack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    link: "https://github.com/PaulDebevec/software-engineer-portfolio",
+    githubUrl: "https://github.com/PaulDebevec",
+    liveUrl: "",
   },
 ];
 
@@ -207,12 +217,12 @@ export default function Home() {
               Projects
             </p>
             <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-              Selected work
+              Featured Projects
             </h2>
             <p className="mt-4 text-lg leading-8 text-neutral-300">
-              A few projects that reflect my experience building practical
-              applications, exploring new ideas, and continuing to grow as an
-              engineer.
+              A selection of projects that highlight my experience building practical
+              applications, exploring new technologies, and continuously improving as
+              a full-stack engineer.
             </p>
           </div>
 
@@ -222,11 +232,31 @@ export default function Home() {
                 key={project.title}
                 className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
               >
-                <h3 className="text-xl font-semibold">{project.title}</h3>
-
-                <p className="mt-4 text-sm leading-7 text-neutral-300">
-                  {project.description}
+                <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
+                  Case Study
                 </p>
+
+                <h3 className="mt-3 text-2xl font-semibold">{project.title}</h3>
+
+                <p className="mt-4 text-base leading-7 text-neutral-200">
+                  {project.summary}
+                </p>
+
+                <div className="mt-6 space-y-4">
+                  <div>
+                    <p className="text-sm font-medium text-neutral-400">Problem</p>
+                    <p className="mt-1 text-sm leading-7 text-neutral-300">
+                      {project.problem}
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-medium text-neutral-400">What I built</p>
+                    <p className="mt-1 text-sm leading-7 text-neutral-300">
+                      {project.contribution}
+                    </p>
+                  </div>
+                </div>
 
                 <div className="mt-6 flex flex-wrap gap-2">
                   {project.stack.map((item) => (
@@ -239,12 +269,27 @@ export default function Home() {
                   ))}
                 </div>
 
-                <a
-                  href={project.link}
-                  className="mt-8 inline-block text-sm font-medium text-neutral-100 transition hover:text-neutral-300"
-                >
-                  View Project →
-                </a>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-2xl bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-950 transition hover:bg-white"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-2xl border border-white/15 px-4 py-2 text-sm font-medium text-neutral-100 transition hover:bg-white/5"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </article>
             ))}
           </div>
