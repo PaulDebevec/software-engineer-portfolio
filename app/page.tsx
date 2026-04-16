@@ -67,10 +67,10 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="mx-auto max-w-6xl px-6 py-12">
+      <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <section
           id="home"
-          className="grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr] md:py-20"
+          className="grid gap-10 border-b border-white/10 py-12 md:grid-cols-[1.2fr_0.8fr] md:py-20"
         >
           <div className="flex flex-col justify-center">
             <p className="text-sm uppercase tracking-[0.3em] text-neutral-400">
@@ -91,7 +91,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="rounded-2xl bg-neutral-100 px-5 py-3 text-sm font-medium text-neutral-950 transition hover:scale-[1.02]"
+                className="rounded-2xl bg-neutral-100 px-5 py-3 text-sm font-medium text-neutral-950 transition hover:scale-[1.02] hover:bg-white"
               >
                 View Projects
               </a>
@@ -105,7 +105,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6">
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20">
             <div className="rounded-[1.5rem] border border-white/10 bg-neutral-900 p-6">
               <div className="space-y-4">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
@@ -135,7 +135,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="py-12 md:py-16">
+        <section id="projects" className="border-b border-white/10 py-12 md:py-16">
           <div className="mb-10 max-w-2xl">
             <p className="text-sm uppercase tracking-[0.3em] text-neutral-400">
               Projects
@@ -154,7 +154,7 @@ export default function Home() {
             {projects.map((project) => (
               <article
                 key={project.title}
-                className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
+                className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
               >
                 <h3 className="text-xl font-semibold">{project.title}</h3>
 
@@ -184,9 +184,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="resume" className="py-12 md:py-16">
+        <section id="resume" className="border-b border-white/10 py-12 md:py-16">
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-8">
+            <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-8 shadow-lg shadow-black/10">
               <p className="text-sm uppercase tracking-[0.3em] text-neutral-400">
                 Resume
               </p>
@@ -209,7 +209,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-6">
-              <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+              <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10">
                 <h3 className="text-xl font-semibold">Highlights</h3>
                 <ul className="mt-4 space-y-3 text-sm leading-7 text-neutral-300">
                   <li>
@@ -230,7 +230,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+              <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10">
                 <h3 className="text-xl font-semibold">Skills</h3>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {skills.map((skill) => (
@@ -249,7 +249,7 @@ export default function Home() {
 
         <section id="connect" className="py-12 md:py-16">
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-8">
+            <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-8 shadow-lg shadow-black/10">
               <p className="text-sm uppercase tracking-[0.3em] text-neutral-400">
                 Connect
               </p>
@@ -268,7 +268,7 @@ export default function Home() {
                 href="https://github.com/PaulDebevec"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 transition hover:border-white/20 hover:bg-white/[0.07]"
+                className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:border-white/20 hover:bg-white/[0.07]"
               >
                 <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
                   GitHub
@@ -283,10 +283,10 @@ export default function Home() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/pauldebevec"
+                href="https://www.linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 transition hover:border-white/20 hover:bg-white/[0.07]"
+                className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:border-white/20 hover:bg-white/[0.07]"
               >
                 <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
                   LinkedIn
@@ -302,6 +302,12 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <footer className="border-t border-white/10 py-8">
+          <p className="text-sm text-neutral-400">
+            © 2026 Paul Debevec. Built with Next.js and Tailwind CSS.
+          </p>
+        </footer>
       </div>
     </main>
   );
