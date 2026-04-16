@@ -1,3 +1,20 @@
+const projects = [
+  {
+    title: "Fitness Tracker Rails",
+    description:
+      "A full-stack Rails application for tracking check-ins, measurements, progress photos, and reporting over time.",
+    stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Hotwire", "Monolith"],
+    link: "#",
+  },
+  {
+    title: "Portfolio App",
+    description:
+      "A modern personal portfolio built with Next.js to showcase experience, projects, and professional growth.",
+    stack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    link: "#",
+  }
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -105,11 +122,53 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="py-8">
-          <h2 className="text-2xl font-semibold">Projects</h2>
-          <p className="mt-4 text-neutral-300">
-            Project cards will go here.
-          </p>
+        <section id="projects" className="py-12 md:py-16">
+          <div className="mb-10 max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-neutral-400">
+              Projects
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+              Selected work
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-neutral-300">
+              A few projects that reflect my experience building practical
+              applications, exploring new ideas, and continuing to grow as an
+              engineer.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {projects.map((project) => (
+              <article
+                key={project.title}
+                className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
+              >
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+
+                <p className="mt-4 text-sm leading-7 text-neutral-300">
+                  {project.description}
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-neutral-900 px-3 py-1 text-xs text-neutral-300"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href={project.link}
+                  className="mt-8 inline-block text-sm font-medium text-neutral-100 transition hover:text-neutral-300"
+                >
+                  View Project →
+                </a>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section id="resume" className="py-8">
