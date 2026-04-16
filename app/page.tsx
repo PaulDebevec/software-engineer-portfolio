@@ -10,12 +10,12 @@ const projects = [
   {
     title: "Fitness Tracker Rails",
     summary:
-      "A full-stack Rails application for tracking check-ins, body measurements, progress photos, and reporting over time.",
+      "A full-stack Rails application for tracking check-ins, body measurements, progress photos, and long-term fitness trends.",
     problem:
-      "I wanted to build a practical application that helps users consistently track fitness progress in one place instead of relying on scattered notes, photos, or spreadsheets.",
+      "I wanted to build a practical application that helps users track progress in one place instead of relying on scattered notes, spreadsheets, or disconnected photo history.",
     contribution:
-      "Built the application end to end with nested resources, progress photo support, measurement reporting, and a clean interface for reviewing historical check-in data over time.",
-    stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Monolith"],
+      "Built the application end to end with nested resources, progress photo support, measurement reporting, and a clean interface for reviewing historical check-in data over time. I also focused on maintainability by structuring the application clearly and supporting it with automated testing.",
+    stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Hotwire"],
     githubUrl: "https://github.com/PaulDebevec/fitness_tracker_rails",
     liveUrl: "https://skepti-fitness-rails-a5c9631ca248.herokuapp.com/",
   },
