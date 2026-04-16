@@ -1,105 +1,13 @@
-"use client";
-
-import { useState } from "react";
+import Navbar from "@/components/portfolio/navbar";
 import { portfolioLinks, projects, skills } from "@/data/portfolio";
+import ProjectsSection from "@/components/portfolio/projects-section";
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const { resumeUrl, githubUrl, linkedinUrl } = portfolioLinks;
 
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
-        <div className="mx-auto max-w-6xl px-6 py-4">
-          <div className="flex items-center justify-between gap-4">
-            <a href="#home" className="text-lg font-semibold tracking-wide">
-              Paul Debevec
-            </a>
-
-            <button
-              type="button"
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="rounded-xl border border-white/10 px-4 py-2 text-sm text-neutral-200 transition hover:bg-white/5 md:hidden"
-              aria-label="Toggle navigation menu"
-              aria-expanded={menuOpen}
-            >
-              Menu
-            </button>
-
-            <nav className="hidden items-center gap-6 text-sm text-neutral-300 md:flex">
-              <a href="#home" className="transition hover:text-neutral-100">
-                Home
-              </a>
-              <a href="#projects" className="transition hover:text-neutral-100">
-                Projects
-              </a>
-              <a href="#resume" className="transition hover:text-neutral-100">
-                Resume
-              </a>
-              <a
-                href={githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:text-neutral-100"
-              >
-                GitHub
-              </a>
-              <a
-                href={linkedinUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:text-neutral-100"
-              >
-                LinkedIn
-              </a>
-            </nav>
-          </div>
-
-          {menuOpen && (
-            <nav className="mt-4 flex flex-col gap-3 border-t border-white/10 pt-4 text-sm text-neutral-300 md:hidden">
-              <a
-                href="#home"
-                className="transition hover:text-neutral-100"
-                onClick={() => setMenuOpen(false)}
-              >
-                Home
-              </a>
-              <a
-                href="#projects"
-                className="transition hover:text-neutral-100"
-                onClick={() => setMenuOpen(false)}
-              >
-                Projects
-              </a>
-              <a
-                href="#resume"
-                className="transition hover:text-neutral-100"
-                onClick={() => setMenuOpen(false)}
-              >
-                Resume
-              </a>
-              <a
-                href={githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:text-neutral-100"
-                onClick={() => setMenuOpen(false)}
-              >
-                GitHub
-              </a>
-              <a
-                href={linkedinUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:text-neutral-100"
-                onClick={() => setMenuOpen(false)}
-              >
-                LinkedIn
-              </a>
-            </nav>
-          )}
-        </div>
-      </header>
+      <Navbar githubUrl={githubUrl} linkedinUrl={linkedinUrl} />
 
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <section
@@ -204,89 +112,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="border-b border-white/10 py-12 md:py-16">
-          <div className="mb-10 max-w-2xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-neutral-400">
-              Projects
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
-              Featured Projects
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-neutral-300">
-              A selection of projects that highlight my experience building practical
-              applications, exploring new technologies, and continuously improving as
-              a full-stack engineer.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {projects.map((project) => (
-              <article
-                key={project.title}
-                className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
-              >
-                <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
-                  Project Overview
-                </p>
-
-                <h3 className="mt-3 text-2xl font-semibold">{project.title}</h3>
-
-                <p className="mt-4 text-base leading-7 text-neutral-200">
-                  {project.summary}
-                </p>
-
-                <div className="mt-6 space-y-4">
-                  <div>
-                    <p className="text-sm font-medium text-neutral-400">Problem</p>
-                    <p className="mt-1 text-sm leading-7 text-neutral-300">
-                      {project.problem}
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="text-sm font-medium text-neutral-400">What I built</p>
-                    <p className="mt-1 text-sm leading-7 text-neutral-300">
-                      {project.contribution}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {project.stack.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full bg-neutral-900 px-3 py-1 text-xs text-neutral-300"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="mt-8 flex flex-wrap gap-3">
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-2xl bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-950 transition hover:bg-white"
-                    >
-                      Live Demo
-                    </a>
-                  )}
-
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-2xl border border-white/15 px-4 py-2 text-sm font-medium text-neutral-100 transition hover:bg-white/5"
-                  >
-                    View Code
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+        <ProjectsSection projects={projects} />
 
         <section id="resume" className="border-b border-white/10 py-12 md:py-16">
           <div className="grid gap-6 md:grid-cols-2">
