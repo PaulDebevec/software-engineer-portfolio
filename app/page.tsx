@@ -10,11 +10,11 @@ const projects = [
   {
     title: "Fitness Tracker Rails",
     summary:
-      "A full-stack fitness tracking app for logging check-ins, measurements, progress photos, and reports over time.",
+      "A full-stack Rails application for tracking check-ins, body measurements, progress photos, and reporting over time.",
     problem:
-      "I wanted to build a practical application that helps users track progress in one place with check-ins, measurements, photos, and reporting.",
+      "I wanted to build a practical application that helps users consistently track fitness progress in one place instead of relying on scattered notes, photos, or spreadsheets.",
     contribution:
-      "Built the full application with nested resources, reporting features, progress photo support, and a clean interface for reviewing fitness data over time.",
+      "Built the application end to end with nested resources, progress photo support, measurement reporting, and a clean interface for reviewing historical check-in data over time.",
     stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Hotwire"],
     githubUrl: "https://github.com/PaulDebevec/fitness_tracker_rails",
     liveUrl: "https://skepti-fitness-rails-a5c9631ca248.herokuapp.com/",
@@ -22,11 +22,11 @@ const projects = [
   {
     title: "Portfolio App",
     summary:
-      "A modern portfolio site designed to showcase projects, experience, and growth as a full-stack engineer.",
+      "A responsive portfolio application built with Next.js to showcase projects, experience, and continued growth as a full-stack engineer.",
     problem:
-      "I wanted a polished personal site that presents my work clearly on both desktop and mobile while giving me hands-on experience with Next.js.",
+      "I wanted a professional portfolio that presents my work clearly across desktop and mobile while also giving me hands-on experience building with Next.js and modern frontend patterns.",
     contribution:
-      "Designed and built the site with responsive layouts, reusable content sections, a mobile navigation menu, and a clean visual system.",
+      "Designed and built the site with reusable sections, responsive layouts, a mobile navigation menu, and structured project case studies that make the portfolio easier to scan and maintain.",
     stack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     githubUrl: "https://github.com/PaulDebevec",
     liveUrl: "",
@@ -233,7 +233,7 @@ export default function Home() {
                 className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
               >
                 <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
-                  Case Study
+                  Project Overview
                 </p>
 
                 <h3 className="mt-3 text-2xl font-semibold">{project.title}</h3>
@@ -287,7 +287,7 @@ export default function Home() {
                     rel="noreferrer"
                     className="rounded-2xl border border-white/15 px-4 py-2 text-sm font-medium text-neutral-100 transition hover:bg-white/5"
                   >
-                    GitHub
+                    View Code
                   </a>
                 </div>
               </article>
