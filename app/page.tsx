@@ -2,20 +2,24 @@
 
 import { useState } from "react";
 
+const resumeUrl = "/resume.pdf";
+const githubUrl = "https://github.com/PaulDebevec";
+const linkedinUrl = "https://www.linkedin.com/in/pauldebevec";
+
 const projects = [
   {
     title: "Fitness Tracker Rails",
     description:
       "A full-stack Rails application for tracking check-ins, measurements, progress photos, and reporting over time.",
     stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Hotwire"],
-    link: "#",
+    link: "https://github.com/PaulDebevec/fitness_tracker_rails",
   },
   {
     title: "Portfolio App",
     description:
       "A modern personal portfolio built with Next.js to showcase experience, projects, and professional growth.",
     stack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    link: "#",
+    link: "https://github.com/PaulDebevec/software-engineer-portfolio",
   },
 ];
 
@@ -65,7 +69,7 @@ export default function Home() {
                 Resume
               </a>
               <a
-                href="https://github.com/PaulDebevec"
+                href={githubUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="transition hover:text-neutral-100"
@@ -73,7 +77,7 @@ export default function Home() {
                 GitHub
               </a>
               <a
-                href="https://www.linkedin.com"
+                href={linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="transition hover:text-neutral-100"
@@ -152,10 +156,12 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#projects"
-                className="rounded-2xl bg-neutral-100 px-5 py-3 text-sm font-medium text-neutral-950 transition hover:scale-[1.02] hover:bg-white"
+                href={projects.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-block text-sm font-medium text-neutral-100 transition hover:text-neutral-300"
               >
-                View Projects
+                View Project →
               </a>
 
               <a
@@ -263,7 +269,8 @@ export default function Home() {
               </p>
 
               <a
-                href="#"
+                href={resumeUrl}
+                download
                 className="mt-8 inline-block rounded-2xl border border-white/15 px-5 py-3 text-sm font-medium text-neutral-100 transition hover:bg-white/5"
               >
                 Download Resume
