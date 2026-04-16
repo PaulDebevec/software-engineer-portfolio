@@ -15,7 +15,7 @@ const projects = [
       "I wanted to build a practical application that helps users consistently track fitness progress in one place instead of relying on scattered notes, photos, or spreadsheets.",
     contribution:
       "Built the application end to end with nested resources, progress photo support, measurement reporting, and a clean interface for reviewing historical check-in data over time.",
-    stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Hotwire"],
+    stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Monolith"],
     githubUrl: "https://github.com/PaulDebevec/fitness_tracker_rails",
     liveUrl: "https://skepti-fitness-rails-a5c9631ca248.herokuapp.com/",
   },
@@ -43,6 +43,7 @@ const skills = [
   "RSpec",
   "REST APIs",
   "JavaScript",
+  "React",
   "Git",
 ];
 
@@ -195,7 +196,7 @@ export default function Home() {
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                   <p className="text-sm text-neutral-400">Core strengths</p>
                   <p className="mt-2 text-base text-neutral-100">
-                    Python, Ruby on Rails, Golang, Django, Flask
+                    Ruby on Rails, Python, Django, Flask, JavaScript, React, RSpec, Unittest
                   </p>
                 </div>
 
