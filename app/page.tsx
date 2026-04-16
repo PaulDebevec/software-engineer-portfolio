@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const resumeUrl = "/resume.pdf";
+const resumeUrl = "/paul-debevec-resume.pdf";
 const githubUrl = "https://github.com/PaulDebevec";
 const linkedinUrl = "https://www.linkedin.com/in/pauldebevec";
 
@@ -154,7 +154,7 @@ export default function Home() {
             </p>
 
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight md:text-6xl">
-              Full-stack engineer who is eager to learn
+              Full-stack Engineer & Lifelong Learner
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
@@ -207,6 +207,41 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-white/10 py-12 md:py-16">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-neutral-400">
+                About
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+                Full-stack engineer focused on practical, reliable systems
+              </h2>
+            </div>
+
+            <div className="space-y-4 text-neutral-300 leading-7">
+              <p>
+                I'm a software engineer with a strong backend focus, experienced in
+                building and maintaining production systems across industries including
+                aerospace and insurance. I enjoy solving real-world problems and building
+                software that is both reliable and maintainable.
+              </p>
+
+              <p>
+                My work has included developing Python-based services for satellite
+                operations, improving system performance through logging and observability
+                improvements, and migrating legacy systems to modern, well-tested
+                architectures.
+              </p>
+
+              <p>
+                I care about clean code, strong testing practices, and continuous
+                learning. I enjoy working collaboratively with teams and building
+                systems that other developers can easily understand and extend.
+              </p>
             </div>
           </div>
         </section>
@@ -305,10 +340,10 @@ export default function Home() {
                 Experience and technical background
               </h2>
               <p className="mt-4 text-lg leading-8 text-neutral-300">
-                I bring professional software engineering experience across
-                backend development, testing, production support, and building
-                practical applications that prioritize maintainability and real
-                user needs.
+                Software engineer with professional experience building and maintaining
+                backend systems, improving performance, and developing reliable
+                applications across multiple industries. Strong focus on clean
+                architecture, testing, and real-world problem solving.
               </p>
 
               <a
@@ -322,30 +357,50 @@ export default function Home() {
 
             <div className="space-y-6">
               <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10">
-                <h3 className="text-xl font-semibold">Highlights</h3>
+                <h3 className="text-xl font-semibold">Experience Highlights</h3>
                 <ul className="mt-4 space-y-3 text-sm leading-7 text-neutral-300">
                   <li>
-                    Software engineer with experience building and supporting
-                    applications using Python, Ruby on Rails, Golang, Django,
-                    and Flask.
+                    Built and maintained backend systems for satellite operations at
+                    Maxar, including Python-based services and internal tooling.
                   </li>
                   <li>
-                    Worked on practical product and platform problems including
-                    backend development, debugging, testing, and maintainable
-                    system design.
+                    Migrated legacy APIs from Ruby to Python, adding automated tests and
+                    ensuring safe production deployment.
                   </li>
                   <li>
-                    Enjoy collaborating with teams, learning quickly, and
-                    building software that balances reliability with a polished
-                    user experience.
+                    Improved system performance by auditing and refactoring logging
+                    pipelines, reducing excessive log volume and increasing observability quality.
+                  </li>
+                  <li>
+                    Developed and maintained Rails features in large production
+                    applications, collaborating through pair and mob programming.
+                  </li>
+                  <li>
+                    Implemented automated testing frameworks using Cucumber, Gherkin,
+                    and Behave to replace manual testing workflows.
                   </li>
                 </ul>
               </div>
 
               <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10">
-                <h3 className="text-xl font-semibold">Skills</h3>
+                <h3 className="text-xl font-semibold">Core Skills</h3>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {skills.map((skill) => (
+                  {[
+                    "Python",
+                    "Ruby on Rails",
+                    "Golang",
+                    "Django",
+                    "Flask",
+                    "PostgreSQL",
+                    "REST APIs",
+                    "RSpec",
+                    "Cucumber",
+                    "AWS S3",
+                    "Elasticsearch",
+                    "Docker",
+                    "JavaScript",
+                    "React",
+                  ].map((skill) => (
                     <span
                       key={skill}
                       className="rounded-full bg-neutral-900 px-3 py-1 text-xs text-neutral-300"
