@@ -3,7 +3,7 @@ const projects = [
     title: "Fitness Tracker Rails",
     description:
       "A full-stack Rails application for tracking check-ins, measurements, progress photos, and reporting over time.",
-    stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Hotwire", "Monolith"],
+    stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Hotwire"],
     link: "#",
   },
   {
@@ -12,7 +12,20 @@ const projects = [
       "A modern personal portfolio built with Next.js to showcase experience, projects, and professional growth.",
     stack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     link: "#",
-  }
+  },
+];
+
+const skills = [
+  "Python",
+  "Ruby on Rails",
+  "Golang",
+  "Django",
+  "Flask",
+  "PostgreSQL",
+  "RSpec",
+  "REST APIs",
+  "JavaScript",
+  "Git",
 ];
 
 export default function Home() {
@@ -137,7 +150,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project) => (
               <article
                 key={project.title}
@@ -171,11 +184,67 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="resume" className="py-8">
-          <h2 className="text-2xl font-semibold">Resume</h2>
-          <p className="mt-4 text-neutral-300">
-            Resume content will go here.
-          </p>
+        <section id="resume" className="py-12 md:py-16">
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-8">
+              <p className="text-sm uppercase tracking-[0.3em] text-neutral-400">
+                Resume
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+                Experience and technical background
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-neutral-300">
+                I bring professional software engineering experience across
+                backend development, testing, production support, and building
+                practical applications that prioritize maintainability and real
+                user needs.
+              </p>
+
+              <a
+                href="#"
+                className="mt-8 inline-block rounded-2xl border border-white/15 px-5 py-3 text-sm font-medium text-neutral-100 transition hover:bg-white/5"
+              >
+                Download Resume
+              </a>
+            </div>
+
+            <div className="space-y-6">
+              <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+                <h3 className="text-xl font-semibold">Highlights</h3>
+                <ul className="mt-4 space-y-3 text-sm leading-7 text-neutral-300">
+                  <li>
+                    Software engineer with experience building and supporting
+                    applications using Python, Ruby on Rails, Golang, Django,
+                    and Flask.
+                  </li>
+                  <li>
+                    Worked on practical product and platform problems including
+                    backend development, debugging, testing, and maintainable
+                    system design.
+                  </li>
+                  <li>
+                    Enjoy collaborating with teams, learning quickly, and
+                    building software that balances reliability with a polished
+                    user experience.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+                <h3 className="text-xl font-semibold">Skills</h3>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full bg-neutral-900 px-3 py-1 text-xs text-neutral-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className="py-8">
