@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const projects = [
   {
     title: "Fitness Tracker Rails",
@@ -29,41 +33,99 @@ const skills = [
 ];
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
-          <a href="#home" className="text-lg font-semibold tracking-wide">
-            Paul Debevec
-          </a>
+        <div className="mx-auto max-w-6xl px-6 py-4">
+          <div className="flex items-center justify-between gap-4">
+            <a href="#home" className="text-lg font-semibold tracking-wide">
+              Paul Debevec
+            </a>
 
-          <nav className="flex flex-wrap items-center gap-4 text-sm text-neutral-300 md:gap-6">
-            <a href="#home" className="transition hover:text-neutral-100">
-              Home
-            </a>
-            <a href="#projects" className="transition hover:text-neutral-100">
-              Projects
-            </a>
-            <a href="#resume" className="transition hover:text-neutral-100">
-              Resume
-            </a>
-            <a
-              href="https://github.com/PaulDebevec"
-              target="_blank"
-              rel="noreferrer"
-              className="transition hover:text-neutral-100"
+            <button
+              type="button"
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="rounded-xl border border-white/10 px-4 py-2 text-sm text-neutral-200 transition hover:bg-white/5 md:hidden"
+              aria-label="Toggle navigation menu"
+              aria-expanded={menuOpen}
             >
-              GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="transition hover:text-neutral-100"
-            >
-              LinkedIn
-            </a>
-          </nav>
+              Menu
+            </button>
+
+            <nav className="hidden items-center gap-6 text-sm text-neutral-300 md:flex">
+              <a href="#home" className="transition hover:text-neutral-100">
+                Home
+              </a>
+              <a href="#projects" className="transition hover:text-neutral-100">
+                Projects
+              </a>
+              <a href="#resume" className="transition hover:text-neutral-100">
+                Resume
+              </a>
+              <a
+                href="https://github.com/PaulDebevec"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-neutral-100"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-neutral-100"
+              >
+                LinkedIn
+              </a>
+            </nav>
+          </div>
+
+          {menuOpen && (
+            <nav className="mt-4 flex flex-col gap-3 border-t border-white/10 pt-4 text-sm text-neutral-300 md:hidden">
+              <a
+                href="#home"
+                className="transition hover:text-neutral-100"
+                onClick={() => setMenuOpen(false)}
+              >
+                Home
+              </a>
+              <a
+                href="#projects"
+                className="transition hover:text-neutral-100"
+                onClick={() => setMenuOpen(false)}
+              >
+                Projects
+              </a>
+              <a
+                href="#resume"
+                className="transition hover:text-neutral-100"
+                onClick={() => setMenuOpen(false)}
+              >
+                Resume
+              </a>
+              <a
+                href="https://github.com/PaulDebevec"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-neutral-100"
+                onClick={() => setMenuOpen(false)}
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-neutral-100"
+                onClick={() => setMenuOpen(false)}
+              >
+                LinkedIn
+              </a>
+            </nav>
+          )}
         </div>
       </header>
 
