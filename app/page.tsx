@@ -1,5 +1,6 @@
 import AboutSection from "@/components/portfolio/about-section";
 import ConnectSection from "@/components/portfolio/connect-section";
+import Footer from "@/components/portfolio/footer";
 import HeroSection from "@/components/portfolio/hero-section";
 import Navbar from "@/components/portfolio/navbar";
 import ProjectsSection from "@/components/portfolio/projects-section";
@@ -24,11 +25,7 @@ export default function Home() {
 
         <ConnectSection githubUrl={githubUrl} linkedinUrl={linkedinUrl} />
 
-        <footer className="border-t border-white/10 py-8">
-          <p className="text-sm text-neutral-400">
-            © 2026 Paul Debevec. Built with Next.js and Tailwind CSS.
-          </p>
-        </footer>
+        <Footer />
       </div>
     </main>
   );
