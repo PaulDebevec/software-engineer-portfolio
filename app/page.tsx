@@ -156,12 +156,10 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href={projects.link}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-8 inline-block text-sm font-medium text-neutral-100 transition hover:text-neutral-300"
+                href="#projects"
+                className="rounded-2xl bg-neutral-100 px-5 py-3 text-sm font-medium text-neutral-950 transition hover:scale-[1.02] hover:bg-white"
               >
-                View Project →
+                View Projects
               </a>
 
               <a
