@@ -111,7 +111,7 @@ export default function Home() {
                 Resume
               </a>
               <a
-                href="https://github.com/PaulDebevec"
+                href={githubUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="transition hover:text-neutral-100"
@@ -120,7 +120,7 @@ export default function Home() {
                 GitHub
               </a>
               <a
-                href="https://www.linkedin.com"
+                href={linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="transition hover:text-neutral-100"
@@ -332,7 +332,7 @@ export default function Home() {
 
             <div className="grid gap-4">
               <a
-                href="https://github.com/PaulDebevec"
+                href={githubUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:border-white/20 hover:bg-white/[0.07]"
@@ -350,7 +350,7 @@ export default function Home() {
               </a>
 
               <a
-                href="https://www.linkedin.com"
+                href={linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:border-white/20 hover:bg-white/[0.07]"
