@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Paul Debevec Portfolio
+
+A modern personal portfolio built with Next.js and Tailwind CSS to showcase my experience, projects, and professional background as a full-stack software engineer.
+
+## Overview
+
+This portfolio was designed to present my work in a clean, responsive format with an emphasis on:
+
+- real-world engineering experience
+- practical, production-oriented projects
+- strong backend foundations
+- maintainable code and modern frontend structure
+
+The site includes:
+
+- responsive navigation with mobile menu support
+- hero and about sections
+- featured project case studies
+- resume section with view and download options
+- GitHub and LinkedIn links
+- metadata and Open Graph support for sharing and SEO
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Vercel
+
+## Live Site
+
+[pauldebevec.dev](https://pauldebevec.dev)
+
+## Features
+
+- Responsive single-page portfolio layout
+- Modular component-based structure
+- Shared data and types for maintainability
+- Project cards with optional screenshots
+- Live demo and GitHub links for featured projects
+- Resume view and download support
+- Open Graph image and favicon branding
+- Vercel deployment with custom domain
+
+## Project Structure
+
+src/
+- app/
+  - layout.tsx
+  - page.tsx
+  - globals.css
+- components/
+  - portfolio/
+    - about-section.tsx
+    - connect-section.tsx
+    - footer.tsx
+    - hero-section.tsx
+    - home-page.tsx
+    - navbar.tsx
+    - projects-section.tsx
+    - resume-section.tsx
+- data/
+  - portfolio.ts
+- types/
+  - portfolio.ts
+
+public/
+- paul-debevec-resume.pdf
+- og-image.png
+- projects/
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
-```bash
+git clone https://github.com/PaulDebevec/YOUR-REPO-NAME.git
+
+### 2. Move into the project directory
+
+cd YOUR-REPO-NAME
+
+### 3. Install dependencies
+
+npm install
+
+### 4. Start the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Open the app
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit `http://localhost:3000`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build for Production
 
-## Learn More
+To create a production build:
 
-To learn more about Next.js, take a look at the following resources:
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the production build locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+npm run start
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This portfolio is deployed on Vercel with a custom domain.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Future Improvements
+
+- add screenshots for additional projects
+- add more featured work and case studies
+- continue refining portfolio copy and presentation
+- expand project detail content
+- add analytics
+
+## Author
+
+**Paul Debevec**
+
+- Portfolio: [pauldebevec.dev](https://pauldebevec.dev)
+- GitHub: [github.com/PaulDebevec](https://github.com/PaulDebevec)
+- LinkedIn: [linkedin.com/in/pauldebevec](https://www.linkedin.com/in/pauldebevec)
