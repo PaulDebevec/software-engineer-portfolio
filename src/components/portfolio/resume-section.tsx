@@ -38,24 +38,28 @@ type ResumeSectionProps = {
               <h3 className="text-xl font-semibold">Experience Highlights</h3>
               <ul className="mt-4 space-y-3 text-sm leading-7 text-neutral-300">
                 <li>
-                    Built and maintained backend systems for satellite operations at
-                    Maxar, including Python-based services and internal tooling.
+                    Built and maintained backend systems supporting satellite operations at Maxar,
+                    developing Python-based services and internal tooling for mission-critical workflows.
                 </li>
+
                 <li>
-                    Migrated legacy APIs from Ruby to Python, adding automated tests and
-                    ensuring safe production deployment.
+                    Migrated legacy APIs from Ruby to Python, introducing automated test coverage
+                    and ensuring reliable, low-risk production deployments.
                 </li>
+
                 <li>
-                    Improved system performance by auditing and refactoring logging
-                    pipelines, reducing excessive log volume and increasing observability quality.
+                    Improved system performance and observability by auditing and refactoring
+                    logging pipelines, reducing unnecessary log volume and increasing signal quality.
                 </li>
+
                 <li>
-                    Developed and maintained Rails features in large production
-                    applications, collaborating through pair and mob programming.
+                    Contributed to large-scale Rails applications, developing features in
+                    production environments and collaborating through pair and mob programming.
                 </li>
+
                 <li>
-                    Implemented automated testing frameworks using Cucumber, Gherkin,
-                    and Behave to replace manual testing workflows.
+                    Designed and implemented automated testing frameworks using Cucumber,
+                    Gherkin, and Behave, replacing manual QA processes and improving test reliability.
                 </li>
               </ul>
             </div>
