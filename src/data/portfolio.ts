@@ -18,6 +18,8 @@ export const projects: Project[] = [
     stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Hotwire"],
     githubUrl: "https://github.com/PaulDebevec/fitness_tracker_rails",
     liveUrl: "https://skepti-fitness-rails-a5c9631ca248.herokuapp.com/",
+    imageUrl: "/projects/fitness-tracker-2.png",
+    imageAlt: "Screenshot of the Fitness Tracker Rails application dashboard"
   },
   {
     title: "Portfolio App",

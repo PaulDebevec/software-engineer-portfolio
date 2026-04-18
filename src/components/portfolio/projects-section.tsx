@@ -1,4 +1,5 @@
 import type { Project } from "@/types/portfolio";
+import Image from "next/image";
 
 type ProjectsSectionProps = {
   projects: Project[];
@@ -29,6 +30,17 @@ export default function ProjectsSection({
             key={project.title}
             className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
           >
+            {project.imageUrl && (
+              <div className="mb-6 overflow-hidden rounded-[1.25rem] border border-white/10">
+                <Image
+                  src={project.imageUrl}
+                  alt={project.imageAlt || `${project.title} screenshot`}
+                  width={1200}
+                  height={700}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            )}
             <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
               Project Overview
             </p>
