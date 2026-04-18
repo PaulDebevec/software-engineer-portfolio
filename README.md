@@ -74,7 +74,7 @@ public/
 
 ### 1. Clone the repository
 
-git clone https://github.com/PaulDebevec/YOUR-REPO-NAME.git
+git clone https://github.com/PaulDebevec/software-engineer-portfolio.git
 
 ### 2. Move into the project directory
 
