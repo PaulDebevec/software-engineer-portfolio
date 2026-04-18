@@ -7,18 +7,17 @@ export default function HeroSection() {
         <div className="relative z-10 grid gap-10 md:grid-cols-[1.2fr_0.8fr]">
           <div className="flex flex-col justify-center">
             <p className="text-sm uppercase tracking-[0.3em] text-neutral-400">
-              Full-Stack Engineer
+                Full-Stack Engineer • Backend Focus
             </p>
-  
+
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight md:text-6xl">
-              Full-stack Engineer &amp; Lifelong Learner
+                Full-stack engineer building reliable, production-ready systems
             </h1>
-  
+
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
-                I build practical, maintainable applications with a focus on clean
-                architecture, thoughtful user experience, and continuous growth.
-                I enjoy solving real problems, learning new technologies, and
-                creating software that feels both reliable and polished.
+                I design and build maintainable applications across multiple stacks, with a
+                strong focus on backend systems, performance, and clean architecture. I enjoy
+                solving real-world problems and continuously improving as an engineer.
             </p>
   
             <div className="mt-8 flex flex-wrap gap-4">
