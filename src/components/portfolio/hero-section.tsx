@@ -15,10 +15,10 @@ export default function HeroSection() {
             </h1>
   
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
-              I build practical, maintainable applications with a focus on clean
-              architecture, thoughtful user experience, and continuous growth. I
-              enjoy solving real problems, learning new technologies, and creating
-              software that feels both reliable and polished.
+                I build practical, maintainable applications with a focus on clean
+                architecture, thoughtful user experience, and continuous growth.
+                I enjoy solving real problems, learning new technologies, and
+                creating software that feels both reliable and polished.
             </p>
   
             <div className="mt-8 flex flex-wrap gap-4">
