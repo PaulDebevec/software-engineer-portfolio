@@ -74,19 +74,19 @@ public/
 
 ### 1. Clone the repository
 
-git clone https://github.com/PaulDebevec/software-engineer-portfolio.git
+`git clone https://github.com/PaulDebevec/software-engineer-portfolio.git`
 
 ### 2. Move into the project directory
 
-cd YOUR-REPO-NAME
+`cd software-engineer-portfolio`
 
 ### 3. Install dependencies
 
-npm install
+`npm install`
 
 ### 4. Start the development server
 
-npm run dev
+`npm run dev`
 
 ### 5. Open the app
 
@@ -96,11 +96,11 @@ Visit `http://localhost:3000`
 
 To create a production build:
 
-npm run build
+`npm run build`
 
 To run the production build locally:
 
-npm run start
+`npm run start`
 
 ## Deployment
 
