@@ -13,24 +13,23 @@ export default function AboutSection() {
   
           <div className="space-y-4 leading-7 text-neutral-300">
             <p>
-              I'm a software engineer with a strong backend focus, experienced in
-              building and maintaining production systems across industries
-              including aerospace and insurance. I enjoy solving real-world
-              problems and building software that is both reliable and
-              maintainable.
+                I'm a full-stack software engineer with a strong backend focus, experienced
+                in building and maintaining production systems across multiple stacks and
+                industries, including aerospace and insurance. I enjoy solving real-world
+                problems and developing software that is reliable, scalable, and easy to
+                maintain.
             </p>
-  
             <p>
-              My work has included developing Python-based services for satellite
-              operations, improving system performance through logging and
-              observability improvements, and migrating legacy systems to modern,
-              well-tested architectures.
+                My work spans Python, Ruby on Rails, and Golang, where I've built backend
+                services, contributed to full-stack applications, and helped evolve systems
+                from legacy implementations to modern, well-tested architectures. I've also
+                focused on improving performance and observability through logging and system
+                optimization.
             </p>
-  
             <p>
-              I care about clean code, strong testing practices, and continuous
-              learning. I enjoy working collaboratively with teams and building
-              systems that other developers can easily understand and extend.
+                I care about clean code, strong testing practices, and continuous learning.
+                I enjoy collaborating with teams and building systems that other engineers
+                can easily understand, extend, and trust in production.
             </p>
           </div>
         </div>
