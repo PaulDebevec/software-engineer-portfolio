@@ -24,13 +24,24 @@ type ResumeSectionProps = {
               clean architecture, testing, and real-world problem solving.
             </p>
   
-            <a
-              href={resumeUrl}
-              download
-              className="mt-8 inline-block rounded-2xl border border-white/15 px-5 py-3 text-sm font-medium text-neutral-100 transition hover:bg-white/5"
-            >
-              Download Resume
-            </a>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href={resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl bg-neutral-100 px-5 py-3 text-sm font-medium text-neutral-950 transition hover:bg-white"
+              >
+                View Resume
+              </a>
+
+              <a
+                href={resumeUrl}
+                download
+                className="rounded-2xl border border-white/15 px-5 py-3 text-sm font-medium text-neutral-100 transition hover:bg-white/5"
+              >
+                Download Resume
+              </a>
+            </div>
           </div>
   
           <div className="space-y-6">
