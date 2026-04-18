@@ -30,7 +30,7 @@ export default function ProjectsSection({
             className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
           >
             <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
-              Case Study
+              Project Overview
             </p>
 
             <h3 className="mt-3 text-2xl font-semibold">{project.title}</h3>
