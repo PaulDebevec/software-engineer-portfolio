@@ -8,18 +8,18 @@ export const portfolioLinks: PortfolioLinks = {
 
 export const projects: Project[] = [
   {
-    title: "Fitness Tracker Rails",
+    title: "BodMetriks",
     summary:
       "A full-stack Rails application for tracking check-ins, body measurements, progress photos, and long-term fitness trends.",
     problem:
       "I wanted to build a practical application that helps users track progress in one place instead of relying on scattered notes, spreadsheets, or disconnected photo history.",
     contribution:
       "Built the application end to end with nested resources, progress photo support, measurement reporting, and a clean interface for reviewing historical check-in data over time. I also focused on maintainability by structuring the application clearly and supporting it with automated testing.",
-    stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "Hotwire"],
+    stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "JavaScript"],
     githubUrl: "https://github.com/PaulDebevec/fitness_tracker_rails",
-    liveUrl: "https://skepti-fitness-rails-a5c9631ca248.herokuapp.com/",
+    liveUrl: "https://www.bodmetriks.com/",
     imageUrl: "/projects/fitness-tracker-2.png",
-    imageAlt: "Screenshot of the Fitness Tracker Rails application dashboard"
+    imageAlt: "Screenshot of a BodMetriks profile page"
   },
   {
     title: "Portfolio App",
