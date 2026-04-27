@@ -51,33 +51,31 @@ export default function ProjectImageSlider({
         />
 
         {hasMultipleImages && (
-          <div className="absolute bottom-3 left-3 rounded-full bg-neutral-950/80 px-3 py-1 text-xs text-neutral-300 backdrop-blur">
-            {currentIndex + 1} / {images.length}
-          </div>
+          <>
+            <button
+              type="button"
+              onClick={showPreviousImage}
+              className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-neutral-950/70 text-xl text-neutral-100 backdrop-blur transition hover:bg-neutral-900/90"
+              aria-label={`Show previous image for ${projectTitle}`}
+            >
+              ‹
+            </button>
+
+            <button
+              type="button"
+              onClick={showNextImage}
+              className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-neutral-950/70 text-xl text-neutral-100 backdrop-blur transition hover:bg-neutral-900/90"
+              aria-label={`Show next image for ${projectTitle}`}
+            >
+              ›
+            </button>
+
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-neutral-950/80 px-3 py-1 text-xs text-neutral-300 backdrop-blur">
+              {currentIndex + 1} / {images.length}
+            </div>
+          </>
         )}
       </div>
-
-      {hasMultipleImages && (
-        <div className="flex items-center justify-between gap-3 border-t border-white/10 p-3">
-          <button
-            type="button"
-            onClick={showPreviousImage}
-            className="rounded-xl border border-white/10 px-3 py-2 text-sm text-neutral-200 transition hover:bg-white/5"
-            aria-label={`Show previous image for ${projectTitle}`}
-          >
-            Previous
-          </button>
-
-          <button
-            type="button"
-            onClick={showNextImage}
-            className="rounded-xl border border-white/10 px-3 py-2 text-sm text-neutral-200 transition hover:bg-white/5"
-            aria-label={`Show next image for ${projectTitle}`}
-          >
-            Next
-          </button>
-        </div>
-      )}
     </div>
   );
 }
