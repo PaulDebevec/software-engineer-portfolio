@@ -34,13 +34,15 @@ export default function ProjectsSection({
               Project Overview
             </p>
 
-            <h3 className="mt-3 text-2xl font-semibold">{project.title}</h3>
+            <h3 className="mt-3 text-2xl font-semibold leading-tight">{project.title}</h3>
             
             {project.images && (
-              <ProjectImageSlider
-                images={project.images}
-                projectTitle={project.title}
-              />
+              <div className="mt-5">
+                <ProjectImageSlider
+                  images={project.images}
+                  projectTitle={project.title}
+                />
+              </div>
             )}
 
             <p className="mt-4 text-base leading-7 text-neutral-200">
