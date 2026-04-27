@@ -28,3 +28,13 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes slide-progress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type ProjectImage = {
   src: string;
@@ -13,11 +13,15 @@ type ProjectImageSliderProps = {
   projectTitle: string;
 };
 
+const SLIDE_INTERVAL_MS = 5000;
+
 export default function ProjectImageSlider({
   images,
   projectTitle,
 }: ProjectImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [timerKey, setTimerKey] = useState(0);
+  const [progressKey, setProgressKey] = useState(0);
 
   if (images.length === 0) {
     return null;
@@ -26,17 +30,39 @@ export default function ProjectImageSlider({
   const currentImage = images[currentIndex];
   const hasMultipleImages = images.length > 1;
 
+  function resetTimer() {
+    setTimerKey((current) => current + 1);
+    setProgressKey((current) => current + 1);
+  }
+
   function showPreviousImage() {
     setCurrentIndex((current) =>
       current === 0 ? images.length - 1 : current - 1
     );
+    resetTimer();
   }
 
   function showNextImage() {
     setCurrentIndex((current) =>
       current === images.length - 1 ? 0 : current + 1
     );
+    resetTimer();
   }
+
+  useEffect(() => {
+    if (!hasMultipleImages) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setCurrentIndex((current) =>
+        current === images.length - 1 ? 0 : current + 1
+      );
+      setProgressKey((current) => current + 1);
+    }, SLIDE_INTERVAL_MS);
+
+    return () => window.clearTimeout(timer);
+  }, [currentIndex, timerKey, hasMultipleImages, images.length]);
 
   return (
     <div className="mb-6 overflow-hidden rounded-[1.25rem] border border-white/10 bg-neutral-900">
@@ -70,8 +96,14 @@ export default function ProjectImageSlider({
               ›
             </button>
 
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-neutral-950/80 px-3 py-1 text-xs text-neutral-300 backdrop-blur">
-              {currentIndex + 1} / {images.length}
+            <div className="absolute bottom-3 left-1/2 w-20 -translate-x-1/2 overflow-hidden rounded-full border border-white/10 bg-neutral-950/80 text-center text-xs text-neutral-200 backdrop-blur">
+              <div
+                key={progressKey}
+                className="absolute inset-y-0 left-0 bg-white/20 motion-safe:animate-[slide-progress_5s_linear_forwards]"
+              />
+              <span className="relative z-10 block px-3 py-1">
+                {currentIndex + 1} / {images.length}
+              </span>
             </div>
           </>
         )}
