@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type ProjectImage = {
   src: string;
@@ -23,6 +23,7 @@ export default function ProjectImageSlider({
   const [timerKey, setTimerKey] = useState(0);
   const [progressKey, setProgressKey] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   if (images.length === 0) {
     return null;
@@ -30,6 +31,7 @@ export default function ProjectImageSlider({
 
   const currentImage = images[currentIndex];
   const hasMultipleImages = images.length > 1;
+  const timerRef = useRef<number | null>(null);
 
   function resetTimer() {
     setTimerKey((current) => current + 1);
@@ -56,23 +58,38 @@ export default function ProjectImageSlider({
   }
 
   useEffect(() => {
-    if (!hasMultipleImages || isPaused) {
+    if (timerRef.current) {
+      window.clearTimeout(timerRef.current);
+    }
+  
+    if (!hasMultipleImages || isPaused || isHovered) {
       return;
     }
-
-    const timer = window.setTimeout(() => {
+  
+    timerRef.current = window.setTimeout(() => {
       setCurrentIndex((current) =>
         current === images.length - 1 ? 0 : current + 1
       );
       setProgressKey((current) => current + 1);
     }, SLIDE_INTERVAL_MS);
-
-    return () => window.clearTimeout(timer);
-  }, [currentIndex, timerKey, hasMultipleImages, images.length]);
+  
+    return () => {
+      if (timerRef.current) {
+        window.clearTimeout(timerRef.current);
+      }
+    };
+  }, [currentIndex, timerKey, hasMultipleImages, images.length, isPaused, isHovered]);
 
   return (
     <div className="mb-6 overflow-hidden rounded-[1.25rem] border border-white/10 bg-neutral-900">
-      <div className="relative">
+      <div
+        className="relative"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => {
+          setIsHovered(false);
+          resetTimer();
+        }}
+      >
         <Image
           src={currentImage.src}
           alt={currentImage.alt}
@@ -111,7 +128,9 @@ export default function ProjectImageSlider({
                 {!isPaused && (
                   <div
                     key={progressKey}
-                    className="absolute inset-y-0 left-0 bg-white/20 motion-safe:animate-[slide-progress_5s_linear_forwards]"
+                    className={`absolute inset-y-0 left-0 bg-white/20 transition-opacity ${
+                      isHovered ? "opacity-40" : "opacity-100"
+                    } motion-safe:animate-[slide-progress_5s_linear_forwards]`}
                   />
                 )}
 
