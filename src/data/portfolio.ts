@@ -18,8 +18,28 @@ export const projects: Project[] = [
     stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "JavaScript"],
     githubUrl: "https://github.com/PaulDebevec/fitness_tracker_rails",
     liveUrl: "https://www.bodimetrix.com/",
-    imageUrl: "/projects/fitness-tracker-2.png",
-    imageAlt: "Screenshot of a BodiMetrix profile page"
+    images: [
+      {
+        src: "/projects/BodiMetrix-home.png",
+        alt: "BodiMetrix landing page",
+      },
+      {
+        src: "/projects/BodiMetrix-profile.png",
+        alt: "BodiMetrix profile page progress comparison slider",
+      },
+      {
+        src: "/projects/BodiMetrix-graph.png",
+        alt: "BodiMetrix reports page showing measurement trends graph",
+      },
+      {
+        src: "/projects/BodiMetrix-report.png",
+        alt: "BodiMetrix reports page showing measurement trends",
+      },
+      {
+        src: "/projects/BodiMetrix-settings.png",
+        alt: "BodiMetrix settings page with theme mode, theme, and password reset",
+      },
+    ],
   },
   {
     title: "Portfolio App",
