@@ -22,6 +22,7 @@ export default function ProjectImageSlider({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [timerKey, setTimerKey] = useState(0);
   const [progressKey, setProgressKey] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   if (images.length === 0) {
     return null;
@@ -49,8 +50,13 @@ export default function ProjectImageSlider({
     resetTimer();
   }
 
+  function togglePause() {
+    setIsPaused((prev) => !prev);
+    setProgressKey((current) => current + 1);
+  }
+
   useEffect(() => {
-    if (!hasMultipleImages) {
+    if (!hasMultipleImages || isPaused) {
       return;
     }
 
@@ -96,15 +102,26 @@ export default function ProjectImageSlider({
               ›
             </button>
 
-            <div className="absolute bottom-3 left-1/2 w-20 -translate-x-1/2 overflow-hidden rounded-full border border-white/10 bg-neutral-950/80 text-center text-xs text-neutral-200 backdrop-blur">
-              <div
-                key={progressKey}
-                className="absolute inset-y-0 left-0 bg-white/20 motion-safe:animate-[slide-progress_5s_linear_forwards]"
-              />
-              <span className="relative z-10 block px-3 py-1">
-                {currentIndex + 1} / {images.length}
-              </span>
-            </div>
+            <button
+                type="button"
+                onClick={togglePause}
+                className="absolute bottom-3 left-1/2 w-24 -translate-x-1/2 overflow-hidden rounded-full border border-white/10 bg-neutral-950/80 text-center text-xs text-neutral-200 backdrop-blur transition hover:bg-neutral-900/90"
+                aria-label={isPaused ? "Resume slideshow" : "Pause slideshow"}
+              >
+                {!isPaused && (
+                  <div
+                    key={progressKey}
+                    className="absolute inset-y-0 left-0 bg-white/20 motion-safe:animate-[slide-progress_5s_linear_forwards]"
+                  />
+                )}
+
+                <span className="relative z-10 flex items-center justify-center gap-2 px-3 py-1">
+                  {currentIndex + 1} / {images.length}
+                  <span className="text-xs">
+                    {isPaused ? "▶" : "❚❚"}
+                  </span>
+                </span>
+              </button>
           </>
         )}
       </div>
