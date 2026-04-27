@@ -1,3 +1,24 @@
+import PersonalPhotoSlider from "@/components/portfolio/personal-photo-slider";
+
+const personalPhotos = [
+  {
+    src: "/about/paul-tycho.jpg",
+    alt: "Paul and Tycho on a trip",
+  },
+  {
+    src: "/about/nature.jpg",
+    alt: "Example of Paul's outdoor photography",
+  },
+  {
+    src: "/about/tycho.jpg",
+    alt: "The pupper Tycho",
+  },
+  {
+    src: "/about/stars.jpg",
+    alt: "Example of Paul's astrophotography",
+  },
+];
+
 export default function AboutSection() {
   return (
     <section className="border-b border-white/10 py-12 md:py-16">
@@ -9,6 +30,10 @@ export default function AboutSection() {
           <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
             Full-stack engineer focused on practical, reliable systems
           </h2>
+
+          <div className="hidden md:block mt-28">
+            <PersonalPhotoSlider photos={personalPhotos} />
+          </div>
         </div>
 
         <div className="space-y-10 text-neutral-300">
@@ -53,7 +78,7 @@ export default function AboutSection() {
             <div className="mt-4 space-y-4 leading-7">
             <p>
               Outside of software, I enjoy staying active with my dog and spending time
-              outdoors—especially climbing, camping, fishing, and hiking. I enjoy getting
+              outdoors; especially climbing, camping, fishing, and hiking. I enjoy getting
               away from screens, exploring new places, and pushing myself both physically
               and mentally.
             </p>
@@ -70,6 +95,11 @@ export default function AboutSection() {
               with friends, creative writing, and learning photography.
             </p>
             </div>
+
+            <div className="md:hidden">
+              <PersonalPhotoSlider photos={personalPhotos} />
+            </div>
+
           </div>
         </div>
       </div>
