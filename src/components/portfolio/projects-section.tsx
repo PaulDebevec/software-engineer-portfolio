@@ -1,5 +1,5 @@
+import ProjectImageSlider from "@/components/portfolio/project-image-slider";
 import type { Project } from "@/types/portfolio";
-import Image from "next/image";
 
 type ProjectsSectionProps = {
   projects: Project[];
@@ -34,15 +34,13 @@ export default function ProjectsSection({
               Project Overview
             </p>
 
-            <h3 className="mt-3 text-2xl font-semibold">{project.title}</h3>
-            {project.imageUrl && (
-              <div className="mb-6 overflow-hidden rounded-[1.25rem] border border-white/10">
-                <Image
-                  src={project.imageUrl}
-                  alt={project.imageAlt || `${project.title} screenshot`}
-                  width={1200}
-                  height={700}
-                  className="h-auto w-full object-cover"
+            <h3 className="mt-3 text-2xl font-semibold leading-tight">{project.title}</h3>
+            
+            {project.images && (
+              <div className="mt-5">
+                <ProjectImageSlider
+                  images={project.images}
+                  projectTitle={project.title}
                 />
               </div>
             )}

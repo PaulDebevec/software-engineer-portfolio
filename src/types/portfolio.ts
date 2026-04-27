@@ -6,8 +6,10 @@ export type Project = {
   stack: string[];
   githubUrl: string;
   liveUrl: string;
-  imageUrl?: string;
-  imageAlt?: string;
+  images?: {
+    src: string;
+    alt: string;
+  }[];
 };
   
   export type PortfolioLinks = {
