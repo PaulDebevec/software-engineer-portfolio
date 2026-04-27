@@ -30,6 +30,11 @@ export default function ProjectsSection({
             key={project.title}
             className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
           >
+            <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
+              Project Overview
+            </p>
+
+            <h3 className="mt-3 text-2xl font-semibold">{project.title}</h3>
             {project.imageUrl && (
               <div className="mb-6 overflow-hidden rounded-[1.25rem] border border-white/10">
                 <Image
@@ -41,11 +46,6 @@ export default function ProjectsSection({
                 />
               </div>
             )}
-            <p className="text-sm uppercase tracking-[0.2em] text-neutral-400">
-              Project Overview
-            </p>
-
-            <h3 className="mt-3 text-2xl font-semibold">{project.title}</h3>
 
             <p className="mt-4 text-base leading-7 text-neutral-200">
               {project.summary}

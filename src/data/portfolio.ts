@@ -8,7 +8,7 @@ export const portfolioLinks: PortfolioLinks = {
 
 export const projects: Project[] = [
   {
-    title: "BodMetriks",
+    title: "BodiMetrix",
     summary:
       "A full-stack Rails application for tracking check-ins, body measurements, progress photos, and long-term fitness trends.",
     problem:
@@ -17,9 +17,9 @@ export const projects: Project[] = [
       "Built the application end to end with nested resources, progress photo support, measurement reporting, and a clean interface for reviewing historical check-in data over time. I also focused on maintainability by structuring the application clearly and supporting it with automated testing.",
     stack: ["Ruby on Rails", "PostgreSQL", "RSpec", "JavaScript"],
     githubUrl: "https://github.com/PaulDebevec/fitness_tracker_rails",
-    liveUrl: "https://www.bodmetriks.com/",
+    liveUrl: "https://www.bodimetrix.com/",
     imageUrl: "/projects/fitness-tracker-2.png",
-    imageAlt: "Screenshot of a BodMetriks profile page"
+    imageAlt: "Screenshot of a BodiMetrix profile page"
   },
   {
     title: "Portfolio App",
